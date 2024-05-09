@@ -4,34 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Editable Resume</title>
-  <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-	</script>
-	<script src=
-  "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    </script>
-    <script src=
-  "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
-    </script>
-    <script src=
-  "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">
-    </script>
-	</script>
   <!-- Include Quill.js CSS -->
   <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <script src=
+ "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+    </script>
+    <script src=
+ "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">
+    </script>
   <!-- Custom CSS for styling the rendered HTML content -->
   <style>
     /* Add your custom styles here */
-    #editor-container {
-      /* background-image: url('background.jpg'); */
+    body {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+    }
+    #editor-container {
+      background-image: url('background-image.jpeg');
       padding: 20px;
     }
     #editor-container h1 {
-      color: #bac749;
+      color: #333;
       font-size: 24px;
       margin-bottom: 10px;
     }
@@ -47,99 +44,82 @@
   <h1>Edit Your Resume</h1>
   <!-- Container for editable content -->
   <div id="editor-container">
-    <!-- Rendered HTML content from Markdown conversion -->
-    <h2 id="resume">Resume</h2>
+    <h1 id="resume">Resume</h1>
 <hr>
-<h3 id="-andrew-solomon-"><strong>ANDREW SOLOMON</strong></h3>
-<h4 id="civil-engineer">Civil Engineer</h4>
-<hr>
-<h4 id="-experience-"><strong>Experience</strong></h4>
-<p><strong>Loka Consulting Engineers — Civil Engineer</strong><br><em>October 2021 - Present</em>  </p>
+<h2 id="name">Name</h2>
+<p>Polly Mer</p>
+<h2 id="role">Role</h2>
+<p>Seeking a Summer Internship in an Engineering Role at a Chemical Company</p>
+<h2 id="candidate-number">Candidate Number</h2>
+<p>2</p>
+<h2 id="skills">Skills</h2>
 <ul>
-<li>Designing stormwater systems for commercial and residential buildings  </li>
-<li>Conducting flood risk assessments for affected lots  </li>
-<li>Managing a small team for coordinated design  </li>
-<li>Inspecting ongoing works to ensure standards are met  </li>
-<li>Coordinating with design team and services  </li>
-<li>Mentoring juniors and providing guidance  </li>
-<li>Creating Excel worksheets for design optimization  </li>
-<li>Conversing with clients and architects for design expectations  </li>
-<li>Liaising with council engineers for design solutions  </li>
+<li>Microsoft Office Suite</li>
+<li>OriginLab</li>
+<li>ImageJ</li>
+<li>MatLab</li>
+<li>Photoshop</li>
+<li>Gold Nanosphere Synthesis</li>
+<li>Liposome Extrusion</li>
+<li>UV/Vis</li>
+<li>Circular Dichroism</li>
+<li>Dynamic Light Scattering</li>
+<li>Zeta Potential</li>
+<li>English (native)</li>
+<li>French (conversant)</li>
 </ul>
-<p><strong>Hydroflux Epco — Project Engineer</strong><br><em>February 2021 - July 2021</em>  </p>
+<h2 id="additional-details">Additional Details</h2>
 <ul>
-<li>Procurement and equipment management  </li>
-<li>Organizing logistics for material delivery  </li>
-<li>Inspecting ongoing works for correctness  </li>
-<li>Working with large clients for project deliverables  </li>
-<li>Managing project aspects including safety, quality, and costs  </li>
+<li>GPA: 3.75/4.00</li>
+<li>Minors in Chemistry and French</li>
 </ul>
-<hr>
-<h4 id="-skills-"><strong>Skills</strong></h4>
+<h2 id="experience-details">Experience Details</h2>
+<h3 id="research-experience-for-undergraduates-university-of-illinois-at-urbana-champaign">Research Experience for Undergraduates, University of Illinois at Urbana-Champaign</h3>
 <ul>
-<li>AutoCAD [2+ Years]  </li>
-<li>Revit [6+ Months]  </li>
-<li>DRAINS [12+ Months]  </li>
-<li>Microsoft Excel [5+ Years]  </li>
+<li>Undergraduate Researcher</li>
+<li>Synthesized and characterized gold nanoparticles and liposomes for analysis of α-synuclein protein</li>
+<li>Attended weekly group meetings with graduate students and principal investigator Professor Cathy Murphy</li>
+<li>Prepared oral and poster presentations for Illinois Summer Research Symposium</li>
 </ul>
-<hr>
-<h4 id="-licences-"><strong>Licences</strong></h4>
+<h3 id="global-communication-center-carnegie-mellon-university">Global Communication Center, Carnegie Mellon University</h3>
 <ul>
-<li>Construction Induction (White Card)  </li>
-<li>NSW Class C Driver’s Licence  </li>
+<li>Writing Tutor</li>
+<li>Meet with 4 students per week to improve organization, argument, analysis, and communication skills in writing</li>
 </ul>
-<hr>
-<p><strong>Contact Information</strong></p>
+<h3 id="lexus-of-north-hills-wexford-pa">Lexus of North Hills, Wexford, PA</h3>
 <ul>
-<li>Mobile: 0422 248 846  </li>
-<li>Email: AndrewSolomon97@hotmail.com  </li>
-<li>LinkedIn: linkedin.com/in/andrewsolomon97    </li>
+<li>Office Assistant</li>
+<li>Entered receipting and sales data and filed paperwork</li>
+<li>Processed an average of 25 customer service calls per session resulting in 100% client follow up within 48 hours</li>
 </ul>
-<hr>
-<p><strong>Additional Details</strong>  </p>
+<h2 id="context">Context</h2>
 <ul>
-<li>Writing Safety Work Method Statements and QA documentation  </li>
-<li>Liaising with trades, suppliers, and professionals  </li>
-<li>Reading engineering plans  </li>
-<li>Reporting project details monthly  </li>
-<li>Communicating effectively with clients  </li>
-<li>Assessing project budgets accurately  </li>
+<li>Carnegie Mellon University, Pittsburgh, PA</li>
+<li>Expected Graduation: May 2018</li>
 </ul>
-<hr>
-<p><strong>Projects</strong></p>
+<h2 id="formations-details">Formations Details</h2>
+<h3 id="education">Education</h3>
 <ul>
-<li><p><strong>Wabag STP, PNG</strong>  </p>
+<li>Bachelor of Science in Chemical Engineering</li>
+<li>Carnegie Mellon University</li>
+<li>Expected: May 2018</li>
+</ul>
+<h2 id="any-other-details">Any other details</h2>
 <ul>
-<li>Designed and procured potable water supply for part of a sewerage treatment plant in Papua New Guinea  </li>
+<li>College of Engineering Community Building Committee Liaison and First-Year Advisory Board member</li>
+<li>Society of Women Engineers Publicity Chair</li>
+<li>Honors and Scholarships: College of Engineering Dean’s List, Carnegie Scholarship, J.L. Stone Memorial Scholarship</li>
 </ul>
-</li>
-<li><p><strong>Cronulla Clarifier Launder Brushes, NSW</strong>  </p>
-<ul>
-<li>Managed project for client D4C including budget, documentation, and schedule  </li>
-</ul>
-</li>
-</ul>
-<hr>
-<p><strong>Education</strong>
-<strong>A&amp;Y Civil — Intern Civil Engineer</strong><br><em>January 2019 - April 2019</em>  </p>
-<ul>
-<li>Obtaining and reviewing offers by subcontractors/vendors  </li>
-<li>Site inspections and checking for safety and quality  </li>
-<li>Coordinating with trades for projects  </li>
-<li>Contacting prospective clients  </li>
-<li>Interpreting drawings and ordering material  </li>
-<li>Managed QA for small jobs  </li>
-<li>Monitoring the practical application of the TMP  </li>
-</ul>
-<hr>
-<p><strong>References</strong>  </p>
 
+    <!-- Rendered HTML content from URL parameters will be displayed here -->
   </div>
 
   <!-- Button to download as PDF -->
   <button id="download-pdf" onclick="convertHTMLtoPDF()">Download as PDF</button>
 
-  
+  <!-- Include Quill.js JavaScript -->
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <!-- Include jsPDF -->
   <script>
     // Function to parse URL parameters
     function getUrlParameter(name) {
@@ -150,8 +130,8 @@
       if (!results[2]) return '';
       return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
+
     // Function to download content as PDF
-    
     function convertHTMLtoPDF() {
 			const { jsPDF } = window.jspdf;
 
@@ -165,13 +145,18 @@
 				x: 12,
 				y: 12
 			});			 
-		}		 
+	}		 
 
-    // Initialize Quill with initial content
-    var quill = new Quill('#editor-container', {
-      theme: 'snow', // Specify the theme ('snow' for a white theme)
-      readOnly: false // Make sure the editor is not read-only
-    });
+    // Function to convert HTML to PDF
+    function htmlToPDF(pdf, html, callback) {
+      pdf.html(html, {
+        callback: function(pdf) {
+          if (callback) {
+            callback();
+          }
+        }
+      });
+    }
 
     // Initialize Quill with initial content from URL parameters
     var initialHTML = getUrlParameter('html');
@@ -181,6 +166,19 @@
       // Set default content if no HTML parameter is provided
       document.getElementById('editor-container').innerHTML = '<h1>Your Resume</h1><p>This is editable content.</p>';
     }
+
+    // Initialize Quill
+    var quill = new Quill('#editor-container', {
+      theme: 'snow', // Specify the theme ('snow' for a white theme)
+      readOnly: false // Make sure the editor is not read-only
+    });
+
+    // Add event listener to get HTML content
+    quill.on('text-change', function(delta, oldDelta, source) {
+      var htmlContent = quill.root.innerHTML;
+      // You can save the HTML content to your backend or use it as needed
+      console.log(htmlContent);
+    });
   </script>
 </body>
 </html>
