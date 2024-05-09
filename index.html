@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editable Resume</title>
+  <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+    </script>
+    <script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">
+    </script>
+	</script>
+  <!-- Include Quill.js CSS -->
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <!-- Custom CSS for styling the rendered HTML content -->
+  <style>
+    /* Add your custom styles here */
+    #editor-container {
+      /* background-image: url('background.jpg'); */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 20px;
+    }
+    #editor-container h1 {
+      color: #bac749;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    #editor-container p {
+      color: #666;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Edit Your Resume</h1>
+  <!-- Container for editable content -->
+  <div id="editor-container">
+    <!-- Rendered HTML content from Markdown conversion -->
+    <h2 id="resume">Resume</h2>
+<hr>
+<h3 id="-andrew-solomon-"><strong>ANDREW SOLOMON</strong></h3>
+<h4 id="civil-engineer">Civil Engineer</h4>
+<hr>
+<h4 id="-experience-"><strong>Experience</strong></h4>
+<p><strong>Loka Consulting Engineers — Civil Engineer</strong><br><em>October 2021 - Present</em>  </p>
+<ul>
+<li>Designing stormwater systems for commercial and residential buildings  </li>
+<li>Conducting flood risk assessments for affected lots  </li>
+<li>Managing a small team for coordinated design  </li>
+<li>Inspecting ongoing works to ensure standards are met  </li>
+<li>Coordinating with design team and services  </li>
+<li>Mentoring juniors and providing guidance  </li>
+<li>Creating Excel worksheets for design optimization  </li>
+<li>Conversing with clients and architects for design expectations  </li>
+<li>Liaising with council engineers for design solutions  </li>
+</ul>
+<p><strong>Hydroflux Epco — Project Engineer</strong><br><em>February 2021 - July 2021</em>  </p>
+<ul>
+<li>Procurement and equipment management  </li>
+<li>Organizing logistics for material delivery  </li>
+<li>Inspecting ongoing works for correctness  </li>
+<li>Working with large clients for project deliverables  </li>
+<li>Managing project aspects including safety, quality, and costs  </li>
+</ul>
+<hr>
+<h4 id="-skills-"><strong>Skills</strong></h4>
+<ul>
+<li>AutoCAD [2+ Years]  </li>
+<li>Revit [6+ Months]  </li>
+<li>DRAINS [12+ Months]  </li>
+<li>Microsoft Excel [5+ Years]  </li>
+</ul>
+<hr>
+<h4 id="-licences-"><strong>Licences</strong></h4>
+<ul>
+<li>Construction Induction (White Card)  </li>
+<li>NSW Class C Driver’s Licence  </li>
+</ul>
+<hr>
+<p><strong>Contact Information</strong></p>
+<ul>
+<li>Mobile: 0422 248 846  </li>
+<li>Email: AndrewSolomon97@hotmail.com  </li>
+<li>LinkedIn: linkedin.com/in/andrewsolomon97    </li>
+</ul>
+<hr>
+<p><strong>Additional Details</strong>  </p>
+<ul>
+<li>Writing Safety Work Method Statements and QA documentation  </li>
+<li>Liaising with trades, suppliers, and professionals  </li>
+<li>Reading engineering plans  </li>
+<li>Reporting project details monthly  </li>
+<li>Communicating effectively with clients  </li>
+<li>Assessing project budgets accurately  </li>
+</ul>
+<hr>
+<p><strong>Projects</strong></p>
+<ul>
+<li><p><strong>Wabag STP, PNG</strong>  </p>
+<ul>
+<li>Designed and procured potable water supply for part of a sewerage treatment plant in Papua New Guinea  </li>
+</ul>
+</li>
+<li><p><strong>Cronulla Clarifier Launder Brushes, NSW</strong>  </p>
+<ul>
+<li>Managed project for client D4C including budget, documentation, and schedule  </li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>Education</strong>
+<strong>A&amp;Y Civil — Intern Civil Engineer</strong><br><em>January 2019 - April 2019</em>  </p>
+<ul>
+<li>Obtaining and reviewing offers by subcontractors/vendors  </li>
+<li>Site inspections and checking for safety and quality  </li>
+<li>Coordinating with trades for projects  </li>
+<li>Contacting prospective clients  </li>
+<li>Interpreting drawings and ordering material  </li>
+<li>Managed QA for small jobs  </li>
+<li>Monitoring the practical application of the TMP  </li>
+</ul>
+<hr>
+<p><strong>References</strong>  </p>
+
+  </div>
+
+  <!-- Button to download as PDF -->
+  <button id="download-pdf" onclick="convertHTMLtoPDF()">Download as PDF</button>
+
+  
+  <script>
+    // Function to parse URL parameters
+    function getUrlParameter(name) {
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(window.location.href);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    // Function to download content as PDF
+    
+    function convertHTMLtoPDF() {
+			const { jsPDF } = window.jspdf;
+
+			let doc = new jsPDF('l', 'mm', [1500, 1400]);
+			let pdfjs = document.querySelector('#editor-container');
+
+			doc.html(pdfjs, {
+				callback: function(doc) {
+					doc.save("newpdf.pdf");
+				},
+				x: 12,
+				y: 12
+			});			 
+		}		 
+
+    // Initialize Quill with initial content
+    var quill = new Quill('#editor-container', {
+      theme: 'snow', // Specify the theme ('snow' for a white theme)
+      readOnly: false // Make sure the editor is not read-only
+    });
+
+    // Initialize Quill with initial content from URL parameters
+    var initialHTML = getUrlParameter('html');
+    if (initialHTML) {
+      document.getElementById('editor-container').innerHTML = decodeURIComponent(initialHTML);
+    } else {
+      // Set default content if no HTML parameter is provided
+      document.getElementById('editor-container').innerHTML = '<h1>Your Resume</h1><p>This is editable content.</p>';
+    }
+  </script>
+</body>
+</html>
